@@ -32,6 +32,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/elections/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/votes/verify/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/audit/proof/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
